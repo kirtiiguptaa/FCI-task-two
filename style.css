@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url(Assests/bg-main-desktop.png);
+    background: url(Assets/bg-main-desktop.png);
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -46,13 +46,13 @@ body {
 }
 
 .card-front {
-    background: url(Assests/bg-card-front.png);
+    background: url(Assets/bg-card-front.png);
     background-position: center;
     background-size: cover;
 }
 
 .card-back {
-    background: url(Assests/bg-card-back.png);
+    background: url(Assets/bg-card-back.png);
     background-position: center;
     background-size: cover;
     align-items: end;
@@ -206,7 +206,7 @@ button {
 
 @media (max-width: 768px) {
     body {
-        background: url(Assests/bg-main-mobile.png);
+        background: url(Assets/bg-main-mobile.png);
         background-repeat: no-repeat;
         background-size: contain;
         flex-direction: column;
@@ -267,8 +267,10 @@ button {
         right: -12px;
         top: 0;
     }
-    form {
+    .formcard {
         bottom: 80px;
+    }
+    form {
         width: 300px;
     }
 }
