@@ -267,8 +267,10 @@ button {
         right: -12px;
         top: 0;
     }
-    form {
+    .formcard {
         bottom: 80px;
+    }
+    form {
         width: 300px;
     }
 }
