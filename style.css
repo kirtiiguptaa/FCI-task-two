@@ -8,8 +8,7 @@
 }
 
 body {
-    background: url(Assets/bg-main-desktop.png);
-    background-repeat: no-repeat;
+    background: url(Assets/bg-main-desktop.png) no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,15 +45,11 @@ body {
 }
 
 .card-front {
-    background: url(Assets/bg-card-front.png);
-    background-position: center;
-    background-size: cover;
+    background: url(Assets/bg-card-front.png) center/cover;
 }
 
 .card-back {
-    background: url(Assets/bg-card-back.png);
-    background-position: center;
-    background-size: cover;
+    background: url(Assets/bg-card-back.png) center/cover;
     align-items: end;
     left: 70px;
 }
@@ -69,7 +64,7 @@ body {
     justify-content: space-between;
 }
 
-.card-name, .card-expiry, .card-cvc {
+.card-name, .card-expiry, .card-cvc, .card-number {
     font-size: 12px;
     letter-spacing: 1px;
     color: hsl(0, 0%, 100%);
@@ -79,7 +74,6 @@ body {
     font-size: 18px;
     letter-spacing: 3px;
     text-align: center;
-    color: hsl(0, 0%, 100%);
 }
 
 .card-cvc {
@@ -96,12 +90,7 @@ form {
     justify-content: center;
 }
 
-.flex-container {
-    display: flex;
-    gap: 10px;
-}
-
-.expiry-container {
+.flex-container, .expiry-container {
     display: flex;
     gap: 10px;
 }
@@ -134,6 +123,7 @@ input {
     border-radius: 5px;
     transition: border 0.3s;
     color: hsl(279, 6%, 55%);
+    height: 40px;
 }
 
 input:focus {
@@ -206,8 +196,7 @@ button {
 
 @media (max-width: 768px) {
     body {
-        background: url(Assets/bg-main-mobile.png);
-        background-repeat: no-repeat;
+        background: url(Assets/bg-main-mobile.png) no-repeat;
         background-size: contain;
         flex-direction: column;
         justify-content: flex-start;
@@ -231,15 +220,15 @@ button {
 
     .card-front {
         position: absolute;
-        left: 0px;
-        top: 100px;
+        left: 55px;
+        top: 140px;
         z-index: 10;
     }
 
     .card-back {
         position: absolute;
-        top: 20px;
-        right: 0px;
+        top: 25px;
+        right: 55px;
         left: unset;
     }
 
@@ -249,6 +238,7 @@ button {
         justify-content: center;
         bottom: 60px;
     }
+
     .thank-you {
         width: 300px;
         position: relative;
@@ -256,20 +246,37 @@ button {
     }
 }
 
+@media (max-width: 520px) {
+    .card-front {
+        left: 0;
+        top: 140px;
+    }
+
+    .card-back {
+        top: 25px;
+        right: 0;
+    }
+}
+
 @media (max-width: 399px) {
     .card-front, .card-back {
         width: 300px;
     }
+
     .card-front {
-        left: -12px;
+        top: 110px;
+        left: -10px;
     }
+
     .card-back {
-        right: -12px;
+        right: -10px;
         top: 0;
     }
+
     .formcard {
         bottom: 80px;
     }
+
     form {
         width: 300px;
     }
