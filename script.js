@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.getElementById('cardForm');
     const thankYouSection = document.querySelector('.thank-you');
-    const formContainer = document.querySelector('.container'); // Changed selector to target the correct container
+    const formContainer = document.querySelector('.container');
     const continueButton = document.getElementById('continueButton');
 
     cardNameInput.addEventListener('input', () => {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (isValid) {
-            form.style.display = 'none';
+            formContainer.style.display = 'none';
             thankYouSection.style.display = 'flex';
         } else {
             alert('Please correct the errors and try again.');
@@ -88,6 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateExpiry() {
         const month = expiryMonthInput.value.padStart(2, '0');
         const year = expiryYearInput.value.padStart(2, '0');
-        cardExpiryDisplay.textContent = `${month}/${year}` || '00/00';
+        cardExpiryDisplay.textContent = month && year ? `${month}/${year}` : '00/00';
     }
 });
